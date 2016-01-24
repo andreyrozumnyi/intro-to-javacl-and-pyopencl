@@ -23,5 +23,5 @@ cd ../..
 sed -i -- 's/"pytools>=2014.2",/"six>=1.4.0","pytools>=2014.2",/g' setup.py
 
 # configure to use the downloaded headers
-python configure.py --cl-inc-dir="$(pwd)/include" --cl-lib-dir=$HOME/AMDAPPSDK-2.9-1/lib/x86_64/
+python configure.py --cl-inc-dir="$(pwd)/include" --cl-lib-dir=$HOME/AMDAPPSDK-3.0/lib/x86_64/
 python setup.py install --user
