@@ -3,7 +3,7 @@
 # A script to install pyopencl on juur.grid.eenet.ee
 
 # Load modules
-module load python/2.7
+module load python/3.4.0
 module load gcc-4.8.2
 
 cd $HOME
@@ -13,10 +13,10 @@ wget https://pypi.python.org/packages/source/p/pyopencl/pyopencl-2015.1.tar.gz
 tar xfz pyopencl-2015.1.tar.gz
 cd pyopencl-2015.1
 
-# Download OpenCL 1.2 headers
+# Download OpenCL 2.1 headers
 mkdir -p include/CL
 cd include/CL
-wget https://www.khronos.org/registry/cl/api/1.2/{opencl,cl_platform,cl,cl_ext,cl_gl,cl_gl_ext}.h
+wget https://www.khronos.org/registry/cl/api/2.1/{opencl,cl_platform,cl,cl_ext,cl_gl,cl_gl_ext}.h
 cd ../..
 
 # add six as install requirement to pyopencl
