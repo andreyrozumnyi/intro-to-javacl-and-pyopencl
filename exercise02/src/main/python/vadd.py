@@ -97,7 +97,7 @@ queue.finish()
 cl.enqueue_copy(queue, h_c, d_c)
 
 rtime = time() - rtime
-print "The kernel ran in", rtime, "seconds"
+print ("The kernel ran in", rtime, "seconds")
 
 # Test the results
 correct = 0;
@@ -110,7 +110,7 @@ for a, b, c in zip(h_a, h_b, h_c):
     if tmp * tmp < TOL * TOL:
         correct += 1
     else:
-        print "tmp", tmp, "h_a", a, "h_b", b, "h_c", c
+        print ("tmp", tmp, "h_a", a, "h_b", b, "h_c", c)
 
 # Summarize results
-print "C = A+B:", correct, "out of", LENGTH, "results were correct."
+print ("C = A+B:", correct, "out of", LENGTH, "results were correct.")
